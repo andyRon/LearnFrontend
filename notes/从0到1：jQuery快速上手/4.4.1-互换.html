@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <meta charset="utf-8" /> 
+    <title></title> 
+    <style type="text/css"> 
+        ul li:nth-child(2), ul li:nth-child(4) 
+        { 
+            background-color:Orange; 
+        } 
+    </style> 
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> 
+    <script> 
+        $(function () { 
+            $("#btn").click(function () { 
+                //将内容为“CSS”这一个li元素删除，并赋值给$li1 
+                var $li1 = $("li:nth-child(2)").remove(); 
+                //将内容为“jQuery”这一个li元素删除，并赋值给$li2 
+                var $li2 = $("li:nth-child(3)").remove(); 
+              
+                $($li1).insertAfter("ul li:nth-child(2)"); 
+                $($li2).insertBefore("ul li:nth-child(2)"); 
+            }) 
+        }) 
+    </script> 
+</head> 
+<body> 
+    <ul> 
+        <li>HTML</li> 
+        <li>CSS</li> 
+        <li>JavaScript</li> 
+        <li>jQuery</li> 
+        <li>Vue.js</li> 
+    </ul> 
+    <input id="btn" type="button" value="互换" /> 
+</body> 
+</html> 

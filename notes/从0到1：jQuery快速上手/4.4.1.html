@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+    <meta charset="utf-8" /> 
+    <title></title> 
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script> 
+    <script> 
+        $(function () { 
+            $("#btn").click(function () { 
+                //remove()可以将所选元素删除，并且返回被删除的元素 
+                var $li = $("li:nth-child(4)").remove(); 
+                $($li).appendTo("ul"); 
+            }) 
+        }) 
+    </script> 
+</head> 
+<body> 
+    <ul> 
+        <li>HTML</li> 
+        <li>CSS</li> 
+        <li>JavaScript</li> 
+        <li>jQuery</li> 
+        <li>Vue.js</li> 
+    </ul> 
+    <input id="btn" type="button" value="删除" /> 
+</body> 
+</html> 
