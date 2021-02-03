@@ -36,7 +36,7 @@ jQuery文件有两个常用版本：一个是1.x版本，另一个是3.x版本�
 
 选择器，就是用一种方式把想要的那一个元素选中。
 
-在JavaScript中，如果想要选取元素，只能使用getElementById()、getElementsByTagName()、getElementsByClassName()等方法来获取。
+在JavaScript中，如果想要选取元素，只能使用`getElementById()`、`getElementsByTagName()`、`getElementsByClassName()`等方法来获取。
 
 jQuery选择器完全继承了CSS选择器的风格，极大地方便了我们的开发。
 
@@ -109,7 +109,7 @@ $("选择器1, 选择器2, ..., 选择器n")
 
 属性选择器，指的是通过“元素的属性”来选择元素的一种基础选择器。
 
-常见jQuery的属性选择器（其中E指的是元素，attr指的是属性，value指的是属性值）：
+常见jQuery的属性选择器（其中**E**指的是元素，**attr**指的是属性，**value**指的是属性值）：
 
 ![](../../images/learnfrontend-091.jpg)
 
@@ -180,7 +180,24 @@ $("ul li:last-child").css("background-color", "blue");
 
 ![](../../images/learnfrontend-094.jpg)
 
-??
+```html
+<div>
+  <h1></h1>
+  <p></p>
+  <span></span>
+  <span></span>
+</div>
+```
+
+`h1:first-child` ，结果为h1，因为父元素（即div）下的第一个子元素就是h1。
+
+`p:first-child`， `span:first-child`，结果是都选不到任何元素，因为父元素（即div）下的第一个子元素是h1，不是p也不是span。
+
+`h1:first-of-type`，结果为h1，因为h1是父元素下的h1类型的子元素，我们选择其中第一个（实际上也只有一个h1）。
+
+`p:first-of-type`，结果为p，因为p是父元素下的p类型的子元素，我们选择其中第一个（实际上也只有一个p）。
+
+`span:first-of-type`，结果为span，类似👆。
 
 ### “可见性”伪类选择器
 
@@ -461,17 +478,37 @@ $().removeClass("类名")
 $().toggleClass("类名")
 ```
 
-#### 个别样式操作??
+#### 个别样式操作
 
 ##### 元素的宽高
 
+- width()和height()：width
+- innerWidth()和innerHeight()：width + padding
+- outerWidth()和outerHeight()：width + padding + border
 
+![](../../images/learnfrontend-127.jpg)
+
+jQuery的很多方法都有这样一个特点：没有参数的方法表示“获取”，带有参数的方法表示“设置”。
 
 ##### 元素的位置
 
+`offset()`方法来获取或设置元素相对于“当前文档（也就是浏览器窗口）”的偏移距离。
 
+```javascript
+$().offset().top
+$().offset().left
+```
+
+`position()`方法来获取或设置当前元素相对于“最近被定位的祖先元素”的偏移位置。
+
+```javascript
+$().position().top
+$().position().left
+```
 
 ##### 滚动条的距离
+
+可以使用`scrollTop()`方法来获取或设置元素相对于滚动条“顶边”的距离，也可以使用`scrollLeft()`方法来获取或设置元素相对于滚动条“左边”的距离。
 
 
 
@@ -503,7 +540,39 @@ jQuery基本的事件共有6种：页面事件、鼠标事件、键盘事件、�
 
 ### 页面事件
 
+在jQuery中，使用`$(document).ready()`来替代JavaScript中的`window.onload`，
 
+`onload`表示只有当页面上的所有DOM元素以及所有外部文件（图片、外部CSS、外部JavaScript等）加载完成之后才会执行。
+
+`ready`表示只要页面上的所有DOM元素加载完成就可以执行，不需要再等到外部文件（图片、外部CSS、外部JavaScript）加载完成。
+
+ready事件的4种写法：
+
+```javascript
+//写法1：
+$(document).ready(function(){ 
+    …… 
+}) 
+ 
+//写法2： 
+jQuery(document).ready(function(){ 
+    …… 
+}) 
+ 
+//写法3： 
+$(function(){ 
+    ……  
+}) 
+ 
+//写法4： 
+jQuery(function(){ 
+    …… 
+}) 
+```
+
+> window.onload只能调用一次，如果多次调用，则只会执行最后一个。
+>
+> ready事件是可以多次执行。
 
 ### 鼠标事件
 
