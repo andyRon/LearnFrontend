@@ -151,8 +151,6 @@ article、aside这两个元素可以看成是“特殊”的section元素，因�
 
 ##### 新增input元素类型
 
-!!
-
 ![](../images/learnfrontend-053.jpg)
 
 ##### 新增其他表单元素
@@ -308,23 +306,49 @@ datalist元素为文本框提供一个可选的列表。
 
 ##### contenteditable
 
+定义某个元素的内容是否可以被编辑>
+
 ##### data-*
+
+为元素实现自定义属性。
+
+
 
 #### 3.2 input元素的新增属性
 
 ##### autocomplete
 
+来实现文本框的自动提示功能（之前键入过的值）。
+
+autocomplete属性适用于所有文本框型的input元素，包括text、password、email、url、tel等。
+
 ##### autofocus
+
+文本框自动获取焦点。
+
+也适用于所有文本框型的input元素。
 
 ##### placeholder
 
+为文本框添加提示内容。
+
+也适用于所有文本框型的input元素。
+
 ##### required
 
+定义文本框输入内容不能为空。也适用于所有文本框型的input元素。
+
 ##### pattern
+
+为文本框添加验证功能（正则）。
+
+
 
 #### 3.3 form元素的新增属性
 
 ##### novalidate
+
+使用novalidate属性来禁用form元素的所有文本框内置的验证功能。
 
 ### 4 元素拖放
 
@@ -427,6 +451,19 @@ HTML5音频格式主要有3种：ogg、mp3和wav。
 
 
 
+```html
+<!DOCTYPE html>
+<html manifest="cache.manifest" >
+<head>
+  
+</head>
+  ……
+</html>
+
+```
+
+
+
 ### 9 多线程处理
 
 Web Worker其实就是HTML5提供的“JavaScript多线程”解决方案。
@@ -443,7 +480,27 @@ window.navigator.geolocation
 
 ![](../images/learnfrontend-068.jpg)
 
-### 11 桌面通知
+```javascript
+navigator.geolocation.getCurrentPosition(function(position){
+  ……
+}, error, option);
+```
+
+第1个参数是一个回调函数，表示在成功获取到当前地理位置后才会执行；
+
+第2个参数也是一个回调函数，表示在获取当前地理位置失败时才会去执行；
+
+第3个参数是一些可选属性的列表，它包含多个属性。
+
+![](../images/learnfrontend-128.jpg)
+
+
+
+#### 百度地图
+
+!!
+
+### 11 桌面通知??
 
 
 
@@ -456,6 +513,24 @@ var notice = new Notification(title, options);
 ![](../images/learnfrontend-069.jpg)
 
 ### 12 Canvas
+
+#### 12.1 Canvas是什么
+
+##### Canvas用途
+
+1．绘制图形
+
+2．绘制图表
+
+3．动画效果
+
+4．游戏开发
+
+##### Canvas与SVG
+
+Canvas是使用JavaScript动态生成的，SVG是使用XML静态描述的。前者是“位图”，后者是“矢量图”。
+
+#### 12.2 Canvas元素
 
 
 
