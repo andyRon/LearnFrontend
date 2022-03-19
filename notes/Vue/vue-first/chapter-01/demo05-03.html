@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    下拉框：
+    <select v-model="selected">
+        <option disabled value="">--请选择--</option>
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+    </select>
+    <span>选中的值：{{selected}}</span>
+</div>
+
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            selected: ''
+        }
+    });
+
+</script>
+
+</body>
+</html>

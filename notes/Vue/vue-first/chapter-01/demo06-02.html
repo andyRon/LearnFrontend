@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+	<!-- 组件：传递给组件中的值：props -->
+    <rongming v-for="item in items" v-bind:key1="item"></rongming>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+
+    Vue.component('rongming', {
+		props: ['key1'],
+        template: '<li>{{key1}}</li>'
+    });
+    
+
+    var vm = new Vue({
+        el: '#app', 
+		data: {
+			items: ["Java", "Linux", "iOS"]
+		}
+    });
+
+</script>
+</body>
+</html>
