@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>插槽</title>
+</head>
+<body>
+
+<div id="app">
+    <todo>
+        <todo-title slot="todo-title" v-bind:title="title"></todo-title>
+        <todo-items slot="todo-items" v-for="item in todoItems" v-bind:item="item"></todo-items>
+    </todo>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+
+    Vue.component("todo", {
+        template: '<div>\
+                        <slot name="todo-title"></slot>\
+                        <ul>\
+                            <slot name="todo-items"></slot>\
+                        </ur>\
+                    </div>'
+    });
+
+    Vue.component("todo-title", {
+        props: ['title'],
+        template: '<div>{{title}}</div>'
+    });
+    Vue.component("todo-items", {
+        props: ['item'],
+        template: '<li>{{item}}</li>'
+    });
+
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            title: "Java知识体系",
+            todoItems: ['JavaWeb', 'Java', 'Spring', 'SpringMVC', 'MyBatis', 'SpringBoot']
+        }
+    });
+</script>
+</body>
+</html>

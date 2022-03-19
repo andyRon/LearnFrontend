@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- v-cloak：解决闪烁问题，就是数据加载完不要显示   -->
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<div id="app" v-cloak>
+    <div>{{info.name}}</div>
+    <div>{{info.address.street}}</div>
+    <div>{{info.address.city}}</div>
+    <a v-bind:href="info.url">点我</a>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    var vm = new Vue({
+        el: '#app', 
+		mounted() { // 钩子函数 ES6新特性
+			axios.get('./data.json').then(response=>(this.info=response.data));
+		},
+        // data方法，注意区别于data属性
+        data() {
+            return {
+                // 字段必须和json字符串相同，可以少些，但不要写错
+                info: {
+                    name: null,
+                    address: {
+                        street: null,
+                        city: null,
+                        country: null,
+                    },
+                    url: null
+                }
+            }
+        }
+    });
+
+</script>
+</body>
+</html>

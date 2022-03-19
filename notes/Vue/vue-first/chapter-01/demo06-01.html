@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<div id="app">
+    <rongming></rongming>
+</div>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script>
+
+    Vue.component('rongming', {
+        template: '<li>hello</li>'
+    })
+    
+
+    var vm = new Vue({
+        el: '#app', 
+    });
+
+</script>
+</body>
+</html>
