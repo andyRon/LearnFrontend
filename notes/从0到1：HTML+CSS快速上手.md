@@ -549,3 +549,118 @@ list-style-image: url(图片路径)
 # 附录D W3C十六色
 
 ![](../images/learnfrontend-050.jpg)
+
+# 补充
+
+### 块级元素和行内元素
+
+块级元素：块级大多为结构性标记
+
+```
+  <address>...</adderss>   
+
+  <center>...</center>  地址文字
+
+  <h1>...</h1>  标题一级
+
+  <h2>...</h2>  标题二级
+
+  <h3>...</h3>  标题三级
+
+  <h4>...</h4>  标题四级
+
+  <h5>...</h5>  标题五级
+
+  <h6>...</h6>  标题六级
+
+  <hr>  水平分割线
+
+  <p>...</p>  段落
+
+  <pre>...</pre>  预格式化
+
+  <blockquote>...</blockquote>  段落缩进   前后5个字符
+
+  <marquee>...</marquee>  滚动文本
+
+  <ul>...</ul>  无序列表
+
+  <ol>...</ol>  有序列表
+
+  <dl>...</dl>  定义列表
+
+  <table>...</table>  表格
+
+  <form>...</form>  表单
+
+  <div>...</div>
+```
+
+行内元素：行内大多为描述性标记
+```
+  <span>...</span>
+
+  <a>...</a>  链接
+
+  <br>  换行
+
+  <b>...</b>  加粗
+
+  <strong>...</strong>  加粗
+
+  <img >  图片
+
+  <sup>...</sup>  上标
+
+  <sub>...</sub>  下标
+
+  <i>...</i>  斜体
+
+  <em>...</em>  斜体
+
+  <del>...</del>  删除线
+
+  <u>...</u>  下划线
+
+  <input>...</input>  文本框
+
+  <textarea>...</textarea>  多行文本
+
+  <select>...</select>  下拉列表
+```
+
+- 块级元素
+
+  1. 总是从新的一行开始
+
+  2. 高度、宽度都是可控的
+
+  3. 宽度没有设置时，默认为100%
+
+  4. 块级元素中可以包含块级元素和行内元素
+
+- 行内元素
+
+  1. 和其他元素都在一行
+
+  2. 高度、宽度以及内边距都是不可控的
+
+  3. 宽高就是内容的高度，不可以改变
+
+  4. 行内元素只能行内元素，不能包含块级元素
+
+### 对移动网页优化
+
+用meta标签对viewport进行控制
+
+```html
+<meta name="viewport" content="width=device-width, initial-scale=1.0" >
+```
+
+- width：控制 viewport 的大小，可以指定的一个值，如 600，或者特殊的值，如 device-width 为设备的宽度（单位为缩放为 100% 时的 CSS 的像素）。
+- height：和 width 相对应，指定高度。
+- initial-scale：初始缩放比例，也即是当页面第一次 load 的时候缩放比例。
+- maximum-scale：允许用户缩放到的最大比例。
+- minimum-scale：允许用户缩放到的最小比例。
+- user-scalable：用户是否可以手动缩放。
+
