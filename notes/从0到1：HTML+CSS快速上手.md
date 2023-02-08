@@ -90,19 +90,19 @@ H5中可简化成：
 ```
 这段代码表示当前页面在6秒后会自动跳转到http://www.lvyestudy.com这个页面。实际上，很多“小广告”网站就是用这种方式来实现页面定时跳转的。
 
-1. link标签
+3. link标签
 
 用于引入外部样式文件（CSS文件）。
 
-1. style标签
+4. style标签
 
 定义元素的CSS样式。
 
-1. script标签
+5. script标签
 
 定义页面的JavaScript代码，也可以引入外部JavaScript文件。
 
-1. base标签
+6. base标签
 
 可忽略
 
@@ -422,7 +422,9 @@ CSS引入方式有3种：
 
 rel即relative
 
-1. 内部样式表
+2. 内部样式表
+
+​	“style标签”
 
 ```html
 <style type="text/css">￼ 
@@ -431,6 +433,8 @@ rel即relative
 ```
 
 3. 行内样式表
+
+   "标签的style属性"
 
 4. @import
 
