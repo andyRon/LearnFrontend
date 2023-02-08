@@ -600,7 +600,7 @@ CSS3相对于CSS2.1来说，新增了大量属性，不仅可以让页面更加�
 
 ### 17 边框样式
 
-![](/Users/andyron/Library/Application Support/typora-user-images/image-20210112202729715.png)
+![](images/image-20210112202729715.png)
 
 #### 圆角效果：border-radius
 
@@ -716,7 +716,7 @@ transition: 过渡属性 过渡时间 过渡方式 延迟时间;
 
 ### 22 多列布局
 
-![](/Users/andyron/Library/Application Support/typora-user-images/image-20210112203837058.png)
+![](images/image-20210112203837058.png)
 
 
 

@@ -222,9 +222,9 @@ mpvue是美团开发的一个使用`Vue.js`开发小程序的前端框架， 目
 
 SpringMVC流程：
 
-<img src="/Users/andyron/Library/Application Support/typora-user-images/image-20211023104305129.png" alt="image-20211023104305129" style="zoom:50%;" />
+<img src="images/image-20211023104305129.png" alt="image-20211023104305129" style="zoom:50%;" />
 
-![image-20211023104353789](/Users/andyron/Library/Application Support/typora-user-images/image-20211023104353789.png)
+![](images/image-20211023104353789.png)
 
 - 发起请求到前端控制器(`Dispatcher Servlet`)
 - 前端控制器请求`HandlerMapping`查找`Handler`，可以根据`xml`配置、注解进行查找
@@ -238,7 +238,7 @@ SpringMVC流程：
 - 前端控制器进行视图渲染，视图渲染将模型数据(在`ModelAndView`对象中)填充到`request`域
 - 前端控制器向用户响应结果
 
-![image-20211023104429195](/Users/andyron/Library/Application Support/typora-user-images/image-20211023104429195.png)
+![](images/image-20211023104429195.png)
 
 缺点
 
@@ -254,13 +254,13 @@ SpringMVC流程：
 
 时间回到2005年AOAX(Asynchronous JavaScript And XML， 异步JavaScript和XML，老技术新用法)被正式提出并开始使用CDN作为静态资源存储， 于是出现了JavaScript王者归来(在这之前JS都是用来在网页上贴狗皮膏药广告的) 的SPA(Single Page Application) 单页面应用时代。
 
-<img src="/Users/andyron/Library/Application Support/typora-user-images/image-20211023224537872.png" style="zoom:50%;" />
+<img src="images/image-20211023224537872.png" style="zoom:50%;" />
 
 **优点**
 
 这种模式下， **前后端的分工非常清晰， 前后端的关键协作点是AJAX接口。**看起来是如此美妙， 但回过头来看看的话， 这与JSP时代区别不大。复杂度从服务端的JSP里移到了浏览器的JavaScript，浏览器端变得很复杂。类似Spring MVC， **这个时代开始出现浏览器端的分层架构**：
 
-<img src="/Users/andyron/Library/Application Support/typora-user-images/image-20211023224635580.png" alt="" style="zoom:50%;" />
+<img src="images/image-20211023224635580.png" alt="" style="zoom:50%;" />
 
 缺点
 
@@ -273,7 +273,7 @@ SpringMVC流程：
 - MVP(异步通信为主) ：Model、View、Presenter
 - MVVM(异步通信为主)：Model、View、View Model为了降低前端开发复杂度，涌现了大量的前端框架，比如：`Angular JS`、`React`、`Vue.js`、`Ember JS`等， 这些框架总的原则是先按类型分层， 比如Templates、Controllers、Models， 然后再在层内做切分，如下图：
 
-<img src="/Users/andyron/Library/Application Support/typora-user-images/image-20211023224751300.png" style="zoom:50%;" />
+<img src="images/image-20211023224751300.png" style="zoom:50%;" />
 
 **优点**
 
@@ -296,7 +296,7 @@ SpringMVC流程：
 
 前端为主的MV*模式解决了很多很多问题， 但如上所述， 依旧存在不少不足之处。随着Node JS的兴起， JavaScript开始有能力运行在服务端。这意味着可以有一种新的研发模式：
 
-<img src="/Users/andyron/Library/Application Support/typora-user-images/image-20211023225019850.png" style="zoom:50%;" />
+<img src="images/image-20211023225019850.png" style="zoom:50%;" />
 
 在这种研发模式下，前后端的职责很清晰。对前端来说，两个UI层各司其职：
 
@@ -327,7 +327,7 @@ MVVM源自于经典的MVC（Model-View-Controller）模式。MVVM的核心是**V
 - 该层向上与视图层进行**双向数据绑定**
 - 向下与Model层通过接口请求进行数据交互
 
-![image-20211023124926680](/Users/andyron/Library/Application Support/typora-user-images/image-20211023124926680.png)
+![](images/image-20211023124926680.png)
 
 MVVM已经相当成熟了，主要运用但不仅仅在网络应用程序开发中。当下流行的MVVM框架有`Vue.js`， `AngularJS`等。
 
@@ -775,7 +775,7 @@ GitHub: https://github.com/axios/axios
 
 
 
-<img src="/Users/andyron/myfield/github/LearnFrontend/notes/Vue/lifecycle.png" alt="lifecycle" style="zoom:50%;" />
+<img src="lifecycle.png" alt="lifecycle" style="zoom:50%;" />
 
 ## Vue：计算属性、内容分发、自定义事件
 
