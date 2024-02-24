@@ -1,0 +1,108 @@
+/** style.css **/
+.app{
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cube-box52{
+  width: 200px;
+  height: 200px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  transform: rotateX(-10deg);
+}
+.cube-box52:after,.cube-box52:before{
+  content: '';
+  width: 2px;
+  height: 40px;
+  position: absolute;
+  left: 40px;
+  background: linear-gradient(180deg, rgba(4,222,248,0.7) 0%, rgba(127, 255, 212, 0) 100%);
+  animation: movetop52 4s linear infinite;
+}
+.cube-box52:before{
+  left: 160px;
+  background: linear-gradient(180deg, rgba(255,225,33,0.7) 0%, rgba(255, 225, 33, 0) 100%);
+  animation-delay: 2s;
+}
+@keyframes movetop52{
+  0%{
+    bottom: 0px;
+  }
+  100%{
+    bottom: 200px;
+    height: 0;
+  }
+}
+.cube52{
+  width: 100px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform-style: preserve-3d;
+  animation: spin52 4s linear infinite;
+}
+@keyframes spin52{
+  0{
+    transform: translateY(0px) rotateY(0deg);
+  }
+  50% {
+    transform: translateY(-10px) rotateY(180deg);
+  }
+  100%{
+    transform: translateY(0px) rotateY(360deg);
+  }
+}
+.cube52 > div{
+  width: 70px;
+  height: 70px;
+  clip-path: polygon(50% 0%, 0 100%, 100% 100%);
+  background: conic-gradient(from 180deg at 50% 50%, #7FFFD4 0deg, #045AF8 59deg, #EA04F8 149deg, #FFE121 219deg, #04DEF8 301deg, #7FFFD4 360deg);
+  position: absolute;
+  transform-origin: center top;
+}
+.cube52 div:nth-of-type(1){
+  background-color: rgba(4,222,248,0.7);
+  transform: rotateZ(-30deg) rotateY(90deg);
+}
+.cube52 div:nth-of-type(2){
+  background-color: rgba(234,4,248,0.7);
+  transform: rotateZ(30deg) rotateY(90deg);
+}
+.cube52 div:nth-of-type(3){
+  background-color: rgba(127,255,212,0.7);
+  transform: rotateX(30deg);
+}
+.cube52 div:nth-of-type(4){
+  background-color: rgba(4,90,248,0.7);
+  transform: rotateX(-30deg);
+}
+.cube52 div:nth-of-type(5){
+  clip-path: none;
+  background-color: rgba(255,225,33,0.7);
+  transform: rotateX(90deg) translateY(-35px) translateZ(-60px);
+}
+.cube-box52 .cube52:nth-of-type(2){
+  transform: rotateX(180deg);
+  animation: spin52b 4s linear infinite;
+}
+@keyframes spin52b{
+  0{
+    transform: rotateX(180deg) translateY(0px) rotateY(0deg);
+  }
+  50% {
+    transform: rotateX(180deg) translateY(-10px) rotateY(180deg);
+  }
+  100%{
+    transform: rotateX(180deg) translateY(0px) rotateY(360deg);
+  }
+}
