@@ -1,20 +1,20 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		
-		{
-			"path" : "pages/index2/index2",
-			"style" : 
-			{
-				"navigationBarTitleText" : "",
-				"enablePullDownRefresh" : false
-			}
-		},
 		{
 			"path": "pages/index/index",
 			"style": {
 				"navigationBarTitleText": "uniapp零基础入门课程"
 			}
 		},
+		{
+			"path" : "pages/index2/index2",
+			"style" : 
+			{
+				"navigationBarTitleText" : "首页",
+				"enablePullDownRefresh" : false
+			}
+		},
+		
 		{
 			"path" : "pages/list/list",
 			"style" : 
@@ -23,6 +23,13 @@
 				"navigationBarBackgroundColor": "#1AA034",
 				"navigationBarTextStyle": "white",
 				"enablePullDownRefresh" : false
+			}
+		},
+		{
+			"path" : "pages/about/about",
+			"style" : 
+			{
+				"navigationBarTitleText" : "关于我们"
 			}
 		}
 
@@ -33,5 +40,38 @@
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8"
 	},
-	"uniIdRouter": {}
+	"uniIdRouter": {},
+	"tabBar": {
+		"color": "#333",
+		"selectedColor": "#015ff9",
+		"backgroundColor": "#8ec9ff",
+		"list": [
+			{
+				"text": "首页2",
+				"pagePath": "pages/index2/index2",
+				"iconPath": "static/images/tarbar/home.png",
+				"selectedIconPath": "static/images/tarbar/home-s.png"
+				
+			},
+			// {
+			// 	"text": "首页",
+			// 	"pagePath": "pages/index/index",
+				
+				
+			// },
+			{
+				"text": "列表",
+				"pagePath": "pages/list/list",
+				"iconPath": "static/images/tarbar/list.png",
+				"selectedIconPath": "static/images/tarbar/list-s.png"
+			},
+			{
+				"text": "我们",
+				"pagePath": "pages/about/about",
+				"iconPath": "static/images/tarbar/about.png",
+				"selectedIconPath": "static/images/tarbar/about-s.png"
+			}
+		]
+		
+	}
 }

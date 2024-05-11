@@ -1,6 +1,11 @@
 <template>
 	<view class="out">
 		
+		<navigator url="/pages/list/list">新闻列表</navigator>
+		<navigator url="/pages/list/list" open-type="reLaunch">新闻列表</navigator>
+		
+		<navigator url="/pages/about/about" open-type="redirect">关于我</navigator>
+		
 		<video src="/static/images/birds.mp4" autoplay muted loop initial-time="3"></video>
 		
 		<image src="/static/images/pic4.jpg" class="myimg"></image>

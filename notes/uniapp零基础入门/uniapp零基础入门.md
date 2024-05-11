@@ -66,3 +66,87 @@ uniapp组件 与 微信小程序类似
 
 
 Uniapp的按钮样式比较少，可以选择 [Button 按钮|uView](https://xuqu.gitee.io/components/button.html)
+
+### 页面跳转组件
+
+
+
+`open-type`
+
+
+
+### 导航菜单
+
+全局文件page.json 配置
+
+
+
+## 3 vue
+
+单页面项目，最终都生成到一个index.html页面中。
+
+组件
+
+容器：`<template>`  
+
+
+
+一个vue文件三个部分组成
+
+
+
+vue是数据驱动
+
+数据渲染
+
+
+
+v-show 是隐藏dom还在 
+
+
+
+v-html能解析HTML标签
+
+```vue
+<view v-html="title"></view>
+```
+
+
+
+`v-bind`   `:`   动态属性
+
+`:src=""`  双引号里是js了
+
+
+
+`v-on ` `@`
+
+
+
+style绑定
+
+```vue
+<view :style="{background: bgcolor}"></view>
+
+...
+data() {
+	return {
+		bgcolor: "#c00"
+	}
+}
+```
+
+
+
+绑定class
+
+
+
+
+
+`v-model` 双向绑定
+
+
+
+🔖p23
+

@@ -1,7 +1,8 @@
 <template>
 	<view>
-		<h2>新闻列表</h2>
+		<view>about页面</view>
 		<navigator url="/pages/index2/index2">首页</navigator>
+		<navigator url="/pages/list/list">列表页面</navigator>
 	</view>
 </template>
 
