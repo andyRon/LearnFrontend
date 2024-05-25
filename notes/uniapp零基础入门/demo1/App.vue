@@ -1,14 +1,20 @@
 <script>
 	export default {
-		onLaunch: function() {
+		onLaunch: function() {  // 第一次加载
 			console.log('App Launch')
 		},
-		onShow: function() {
+		onShow: function() {    // 焦点进入
 			console.log('App Show')
 		},
-		onHide: function() {
+		onHide: function() {   // 焦点隐藏
 			console.log('App Hide')
-		}
+		},
+		// created: function() {
+		// 	console.log('app created')
+		// },
+		// mounted: function() {
+		// 	console.log('app mounted')
+		// }
 	}
 </script>
 

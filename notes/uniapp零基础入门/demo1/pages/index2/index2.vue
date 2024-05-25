@@ -1,5 +1,6 @@
 <template>
 	<view class="out">
+		<pubTitle :title='test' subtitle='page index' :list="[3,4,5]" :user="{name:'老四', gender: '男'}"></pubTitle>
 		
 		<navigator url="/pages/list/list">新闻列表</navigator>
 		<navigator url="/pages/list/list" open-type="reLaunch">新闻列表</navigator>
@@ -52,7 +53,7 @@
 	export default {
 		data() {
 			return {
-				
+				test: '首页-'
 			};
 		}
 	}

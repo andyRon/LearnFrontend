@@ -148,5 +148,195 @@ data() {
 
 
 
-🔖p23
+
+
+计算属性会先调用缓存，相对于methods性能更好一点
+
+
+
+## 4 
+
+vue中组件没有本质区别，小程序中有稍微差别。
+
+组件的两种注册方式：全局注册、局部注册
+
+### 4.1 easycom自动导入自定义组件
+
+
+
+### 4.2 通过子组件Porp为同组件传不同的值
+
+
+
+
+
+### 4.3 props绑定动态值及数据类型默认值
+
+
+
+### 4.4 emit子向父组件传值
+
+父向子传值，子组件通过props接受父组件传过来的值
+
+
+
+子组件一般不做数据处理。
+
+子组件myevent.vue:
+
+```vue
+<template>
+			<input type="text" placeholder="请输出...." @input="onInput"/>
+
+</template>
+
+<script>
+	export default {
+		//...
+		methods: {
+			onInput(e) {
+				console.log(e.detail.value)
+				// 子组件通过事件向父组件传值
+				this.$emit('myeve', {val: e.detail.value, time: Date.now()})
+			}
+		}
+	}
+</script>
+
+```
+
+父组件：
+
+```vue
+<template>
+	<view>
+
+		<myevent title="组件间的传值" @myeve="onmyeve"></myevent>
+	</view>
+</template>
+
+<script>
+	export default {
+	
+		methods: {
+			onmyeve(e) {
+				console.log(e)
+			}
+		}
+	}
+</script>
+```
+
+![](images/image-20240525191516148.png)
+
+
+
+### 4.5 native修饰符与父子间通信传值案例
+
+自定义组件上写原生事件需要加`.native`，要不然会当成自定义事件。【vue3不需要了】
+
+```vue
+		<myevent title="组件间的传值" @myeve="onmyeve" @click.native="onClick"></myevent>
+```
+
+
+
+父子间通信案例
+
+子组件mypop.vue:
+
+```vue
+<template>
+	<view>
+		<view>-----弹出框样式-----</view>
+		<view class="box" :style="{height: state?'300rpx':'0'}"></view>
+		<button size="mini" @click="onclose">关闭</button>
+	</view>
+</template>
+
+<script>
+	export default {
+		name:"mypop",
+		data() {
+			return {
+				
+			};
+		},
+		props: {
+			state: {
+				type: Boolean,
+				default: false
+			}
+		},
+		methods: {
+			onclose() {
+				// 子组件中不能直接修改父组件传过来的值
+				// this.state=false
+				this.$emit('stateEve', false)
+			}
+		}
+	}
+</script>
+
+```
+
+父组件：
+
+```vue
+<template>
+	<view>
+		....
+		<button @click="clickBtn">开启{{mystate}}</button>
+		<mypop :state="mystate" @stateEve="onStateEve"></mypop>
+	</view>
+</template>
+
+<script>
+	export default {
+		data() {
+			return {
+				about: '我们',
+				mystate: false
+			};
+		},
+		methods: {
+			clickBtn() {
+				this.mystate=true
+			},
+			onStateEve(e) {
+				this.mystate=e
+			}
+		},
+	}
+</script>
+```
+
+
+
+### 4.6 sync修饰符及update的实现原理
+
+父子间通信简化
+
+🔖 vue3中使用v-model
+
+```js
+				// 通过.sync简化父子组件间通信，不需要自定义事件了
+				this.$emit("update:state", false)
+```
+
+
+
+```vue
+		<mypop :state.sync="mystate" ></mypop>
+```
+
+
+
+
+
+### 4.7 vue中的生命周期与小程序周期的对比
+
+![](images/20201227152934734.png)
+
+
 
