@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "demo页面",
+  "navigationBarBackgroundColor": "#008000",
+  "enablePullDownRefresh": false,
+  "usingComponents": {}
+}

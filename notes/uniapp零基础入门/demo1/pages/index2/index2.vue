@@ -1,5 +1,11 @@
 <template>
 	<view class="out">
+		
+		<navigator url="/pages/demo4/demo4?wd=uniapp">跳转到demo4</navigator>
+		
+		<view style="width: 300rpx;height: 300rpx;background: blueviolet;" @click="goDemo4"></view>
+		
+		
 		<pubTitle :title='test' subtitle='page index' :list="[3,4,5]" :user="{name:'老四', gender: '男'}"></pubTitle>
 		
 		<navigator url="/pages/list/list">新闻列表</navigator>
@@ -55,6 +61,16 @@
 			return {
 				test: '首页-'
 			};
+		},
+		methods: {
+			goDemo4() {
+				uni.navigateTo({
+					url:"/pages/demo4/demo4?wd=uni-app&author=王五"
+				})
+				// uni.reLaunch({
+				// 	url:"/pages/list/list?num=2"
+				// })
+			}
 		}
 	}
 </script>

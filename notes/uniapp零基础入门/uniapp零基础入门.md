@@ -338,5 +338,143 @@ vue中组件没有本质区别，小程序中有稍微差别。
 
 ![](images/20201227152934734.png)
 
+## 5 uniapp的api
+
+uniapp的api文档结构与微信小程序的基本一致
+
+### 5.1 uniapp路由与页面跳转的使用方式
+
+页面跳转的两种方式：
+
+1. 使用`navigator`标签
+
+```vue
+		<navigator url="/pages/demo4/demo4">跳转到demo4</navigator>
+```
+
+2. 在点击方法中调用`uni.navigateTo`方法
+
+```js
+			goDemo4() {
+				uni.navigateTo({
+					url:"/pages/demo4/demo4"
+				})
+			}
+```
+
+
+
+uni.redirectTo(OBJECT)：关闭当前页面，跳转到应用内的某个页面。
+
+uni.reLaunch(OBJECT)：关闭所有页面，打开到应用内的某个页面。【可以跳转导航栏里的路由】【可以携带参数】
+
+uni.switchTab(OBJECT)：类似reLaunch，但不能携带参数
+
+uni.navigateBack()
+
+
+
+### 5.2 onload页面传参与vueroute路由的差异
+
+
+
+
+
+---界面---
+
+### 5.3 uni.showToast交互反馈的用法
+
+
+
+
+
+
+
+### 5.4 showLoading和showModal模态弹窗
+
+
+
+
+
+### 5.5 showActionSheet从底部向上弹出操作菜单
+
+```js
+			clcikBox2() {
+				// let that=this
+				uni.showActionSheet({
+					itemList:this.arr,
+					// success: function(res) {  // 这种写法中this不是指向最外层，指向的uni.showActionSheet
+					// 	console.log(that.arr[res.tapIndex])
+					// },
+					
+					success:(res) => {  // 箭头函数中this指向最外层
+						console.log(this.arr[res.tapIndex])
+						
+					}
+				})
+			}
+```
+
+
+
+
+
+### 5.6 动态设置当前页面的标题颜色及加载状态
+
+
+
+### 5.7 tabbar配置iconfont字体图标
+
+```json
+	"tabBar": {
+		"iconfontSrc": "static/fonts/iconfont.ttf",  // 从iconfont.cn下载的
+		"list": [
+			{
+				"text": "首页",
+				"pagePath": "pages/index/index",
+				"iconfont": {
+					"text": "\ue7c6",
+					"selectedText": "\ue600"
+				}
+				
+			},
+			{
+				"text": "新闻",
+				"pagePath": "pages/list/list",
+				"iconfont": {
+					"text": "\ue7f4",
+					"selectedText": "\ue650"
+				}
+			},
+			{
+				"text": "用户",
+				"pagePath": "pages/user/user",
+				"iconfont": {
+					"text": "\ue7ae",
+					"selectedText": "\ue677"
+				}
+			}
+		]	
+	}
+```
+
+
+
+> 小程序不支持iconfont，只能使用iconpath
+
+
+
+
+
+### 5.8 动态设置tabBar的各项内容
+
+
+
+### 5.9 uni.requests网络请求API接口
+
+
+
+### 5.10 request的其他参数说明
+
 
 

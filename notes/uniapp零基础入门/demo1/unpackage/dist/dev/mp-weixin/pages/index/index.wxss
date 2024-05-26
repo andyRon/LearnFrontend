@@ -34,3 +34,7 @@
 .box h1 .row {
   font-style: italic;
 }
+.box2 {
+  height: 300rpx;
+  width: 300rpx;
+}

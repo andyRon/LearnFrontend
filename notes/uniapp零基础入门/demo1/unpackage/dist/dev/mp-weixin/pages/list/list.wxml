@@ -1,1 +1,1 @@
-<view><view>新闻列表</view></view>
+<view><pub-title wx:if="{{a}}" u-i="3344a5c8-0" bind:__l="__l" u-p="{{a}}"></pub-title><view>新闻列表</view><navigator url="/pages/index2/index2">首页</navigator></view>

@@ -21,7 +21,17 @@
   "libVersion": "2.25.3",
   "appid": "touristappid",
   "projectname": "demo1",
-  "condition": {},
+  "condition": {
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/demo4/demo4",
+          "pathName": "pages/demo4/demo4",
+          "query": ""
+        }
+      ]
+    }
+  },
   "editorSetting": {
     "tabIndent": "insertSpaces",
     "tabSize": 2

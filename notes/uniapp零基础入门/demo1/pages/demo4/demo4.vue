@@ -1,6 +1,6 @@
 <template>
 	<view>
-		
+		<view @click="goback">返回上一页</view>
 		<myitem></myitem>
 		
 		
@@ -64,6 +64,9 @@
 			pickerChange(e) {
 				this.selectValue=e.detail.value
 			},
+			goback() {
+				uni.navigateBack()
+			}
 		},
 		computed: {
 			changeTiltle() {
@@ -72,7 +75,18 @@
 			sum() {
 				return parseInt(this.num1) + parseInt(this.num2)
 			}
+		},
+		mounted() {
+			// 小程序中不支持
+			// console.log(this.$route.query.wd)
+		},
+		// 小程序总使用onload获取参数
+		onLoad(e) {
+			console.log(e)
+			// 通过getCurrentPages()获得路由页面信息，代替this.$route
+			console.log(getCurrentPages())
 		}
+		
 		
 	}
 </script>
