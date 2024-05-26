@@ -34,10 +34,8 @@
       {
         "text": "用户",
         "pagePath": "pages/user/user",
-        "iconfont": {
-          "text": "",
-          "selectedText": ""
-        }
+        "iconPath": "static/tabbar/user.png",
+        "selectedIconPath": "static/tabbar/user-s.png"
       }
     ]
   },

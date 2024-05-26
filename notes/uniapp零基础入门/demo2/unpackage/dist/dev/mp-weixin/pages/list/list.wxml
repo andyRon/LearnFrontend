@@ -1,1 +1,1 @@
-<view></view>
+<view><image src="{{picurl}}" data-event-opts="{{[['tap',[['getPicurl',['$event']]]]]}}" bindtap="__e"></image><block wx:for="{{picurls}}" wx:for-item="item" wx:for-index="__i0__" wx:key="id"><view><image src="{{item.url}}" mode="aspectFill"></image></view></block></view>

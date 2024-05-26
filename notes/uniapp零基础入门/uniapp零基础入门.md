@@ -470,7 +470,21 @@ uni.navigateBack()
 
 
 
+
+
 ### 5.9 uni.requests网络请求API接口
+
+随机狗子： https://dog.ceo/api/breeds/image/random
+
+随机猫咪： https://api.thecatapi.com/v1/images/search?limit=1
+
+免费测试api接口： https://jsonplaceholder.typicode.com/posts   https://jsonplaceholder.typicode.com
+
+土味情话：https://jsonplaceholder.typicode.com/posts
+
+
+
+
 
 
 
