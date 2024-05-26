@@ -156,6 +156,8 @@ exports.default = void 0;
 //
 //
 //
+//
+//
 var _default = {
   data: function data() {
     return {
@@ -173,8 +175,26 @@ var _default = {
     // setTimeout(()=>{
     // 	uni.hideLoading()
     // }, 2000)
+
+    uni.setStorage({
+      key: 'demo',
+      data: 12345,
+      success: function success(res) {
+        console.log(res);
+      }
+    });
+    uni.setStorageSync('mykey', '6789');
+    uni.setStorageSync('mykey2', 'uniapp项目');
+    uni.setStorageSync('mykey3', {
+      'name': '张三',
+      age: 18
+    });
+    console.log(uni.getStorageSync('mykey3'));
   },
   methods: {
+    clickBtn: function clickBtn() {
+      uni.removeStorageSync('mykey');
+    },
     clickimg: function clickimg() {
       uni.showToast({
         title: '发送失败',

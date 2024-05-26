@@ -10,6 +10,8 @@
 		<view class="box" @click="clcikBox"></view>
 		-------
 		<view class="box" @click="clcikBox2">从底部向上弹出操作菜单</view>
+		
+		<button @click="clickBtn">删除缓存mykey</button>
 	</view>
 </template>
 
@@ -31,8 +33,25 @@
 			// setTimeout(()=>{
 			// 	uni.hideLoading()
 			// }, 2000)
+			
+			uni.setStorage({
+				key:'demo',
+				data:12345,
+				success:res=> {
+					console.log(res)
+				}
+			})
+			
+			uni.setStorageSync('mykey', '6789')
+			uni.setStorageSync('mykey2', 'uniapp项目')
+			uni.setStorageSync('mykey3', {'name':'张三', age:18})
+			
+			console.log(uni.getStorageSync('mykey3'))
 		},
 		methods: {
+			clickBtn() {
+				uni.removeStorageSync('mykey')
+			},
 			clickimg() {
 				uni.showToast({
 					title:'发送失败',

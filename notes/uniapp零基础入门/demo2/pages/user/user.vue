@@ -32,6 +32,9 @@
 			// uni.showTabBarRedDot({
 			// 	index:1
 			// })
+			
+			console.log('用户页面', uni.getStorageSync('mykey'))
+			
 		}
 	}
 </script>

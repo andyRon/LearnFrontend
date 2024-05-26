@@ -28,6 +28,20 @@
 			{
 				"navigationBarTitleText" : "user页面"
 			}
+		},
+		{
+			"path" : "pages/list2/list2",
+			"style" : 
+			{
+				"navigationBarTitleText" : "新闻2"
+			}
+		},
+		{
+			"path" : "pages/detail/detail",
+			"style" : 
+			{
+				"navigationBarTitleText" : "详情页"
+			}
 		}
 	],
 	"globalStyle": {
@@ -52,6 +66,14 @@
 			{
 				"text": "新闻",
 				"pagePath": "pages/list/list",
+				"iconfont": {
+					"text": "\ue7f4",
+					"selectedText": "\ue650"
+				}
+			},
+			{
+				"text": "新闻2",
+				"pagePath": "pages/list2/list2",
 				"iconfont": {
 					"text": "\ue7f4",
 					"selectedText": "\ue650"

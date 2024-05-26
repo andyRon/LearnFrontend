@@ -3,7 +3,9 @@
     "pages/index/index",
     "pages/demo/demo",
     "pages/list/list",
-    "pages/user/user"
+    "pages/user/user",
+    "pages/list2/list2",
+    "pages/detail/detail"
   ],
   "subPackages": [],
   "window": {
@@ -26,6 +28,14 @@
       {
         "text": "新闻",
         "pagePath": "pages/list/list",
+        "iconfont": {
+          "text": "",
+          "selectedText": ""
+        }
+      },
+      {
+        "text": "新闻2",
+        "pagePath": "pages/list2/list2",
         "iconfont": {
           "text": "",
           "selectedText": ""
