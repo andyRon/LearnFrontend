@@ -9,19 +9,30 @@
 <!--View层 模板-->
 <div id="app">
     {{message}}
+    <ul>
+        <li v-for="cat in cats" >{{cat.name}}</li>
+    </ul>
 </div>
 
 
 
+
 <!-- <srcipt src="https://cdn.jsdelivr.net/npm/vue@2.5.21/dist/vue.js" type="text/javascript"></srcipt> -->
-<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue@2.4.4/dist/vue.js"></script>
 <script>
     
     var vm = new Vue({
         el: '#app',
         // Model：数据
         data: {
-            message: 'Hello Vue.js!'
+            message: 'Hello Vue.js!',
+            cats: [
+                {name: 'Simba', age: 5},
+                {name: 'Robin', age: 2},
+                {name: 'jack', age: 6},
+                {name: 'ron', age: 1}
+            ]
+
         }
     });
 
