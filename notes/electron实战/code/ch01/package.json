@@ -1,0 +1,13 @@
+{
+  "name": "ch01",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "andyron",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "31.3.1"
+  },
+  "scripts": {
+    "start": "electron ./index.js"
+  }
+}
