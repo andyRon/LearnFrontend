@@ -8,7 +8,7 @@ app.on('ready', function(){
     });
     win.loadFile('index.html');
     win.on('closed', function(){
-    win = null
+        win = null
     });
 })
 app.on('window-all-closed',function(){

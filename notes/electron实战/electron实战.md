@@ -1,13 +1,15 @@
 Electron实战：入门、进阶与性能优化
 ---
 
-[Electron实战：入门、进阶与性能优化](https://book.douban.com/subject/35069275/)
+[Electron实战：入门、进阶与性能优化](https://book.douban.com/subject/35069275/) 2020
 
 
+
+[awesome-electron](https://github.com/sindresorhus/awesome-electron)
 
 ## 前言
 
-
+介绍了ES6、HTML5和CSS3是如何与Electron结合的，比如动画效果、Web安全、HTML系统通知、WebSocket通信、音视频设备访问、CSS扩展语言等。
 
 ## 1 认识Electron
 
@@ -15,11 +17,11 @@ Electron实战：入门、进阶与性能优化
 
 
 
-NW.js（https://nwjs.io）和Electron（https://electronjs.org），都是基于Chromium和Node.js实现的
+NW.js（https://nwjs.io）和Electron（https://electronjs.org），都是基于Chromium和Node.js实现的，这就使得前端程序员可以使用JavaScript、HTML和CSS轻松构建跨平台的桌面应用。
 
-王文睿（Roger Wang）
+2011 王文睿（Roger Wang）
 
-赵成（Cheng Zhao）
+2012 赵成（Cheng Zhao）
 
 为了弥补Node.js和前端技术访问系统API方面的不足，这两个框架内部都**对系统API做了封装**，比如系统对话框、系统托盘、系统菜单、剪切板等。开发者基于Electron开发应用时，可以直接使用JavaScript访问这些API。
 
@@ -67,8 +69,6 @@ https://github.com/electron/apps/blob/master/contributing.md#adding-your-app
 
 
 
-[awesome-electron](https://github.com/sindresorhus/awesome-electron)
-
 ### Electron的优势
 
 
@@ -103,7 +103,7 @@ PWA是传统Web应用向桌面端的延伸，它的本质还是一个Web应用�
 
 ### 2.1 搭建开发环境
 
-
+配置Electron的镜像网站：
 
 ```sh
 yarn config set ELECTRON_MIRROR https://cdn.npm.taobao.org/dist/electron/
@@ -117,13 +117,46 @@ yarn global add electron
 
 
 
+```
+\node_modules\electron\path.txt
+
+
+electron.exe
+
+Electron.app/Contents/MacOS/Electron
+```
+
+
+
+> Node.js有三种模块。
+>
+> - 第一种是核心模块，其存在于Node.js环境内，比如fs或net等。
+> - 第二种是项目模块，其存在于当前项目中，一般都是项目开发者手动提供的。require这类模块，一般以./path/fileName这种相对路径寻址。
+> - 第三种是第三方模块，这种模块一般都是项目开发者通过yarn或npm工具手动安装到项目内的。require此类模块一般传入模块名即可，Node.js环境会为我们到当前node_modules目录下寻找模块。
+
+
+
 https://registry.npmmirror.com/-/binary/electron/
 
+```sh
+yarn start
+```
 
 
 
+### 2.2 创建窗口界面
 
-### Electron API演示工具
+
+
+### 2.3 启动窗口
+
+
+
+### 2.4 引用JavaScript
+
+
+
+### 2.5 Electron API演示工具
 
 https://github.com/electron/electron-api-demos/releases
 
